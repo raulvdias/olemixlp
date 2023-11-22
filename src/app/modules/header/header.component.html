@@ -1,0 +1,49 @@
+<div
+  class="flex flex-col gap-5 w-full z-20 sticky top-0 bg-black opacity-class border-b-2"
+>
+  <div class="text-white p-0 w-full shadow-md">
+    <div
+      *ngIf="screenWidth > 639"
+      class="grid grid-cols-3 place-items-center max-w-[70%] mx-auto"
+    >
+      <div>
+        <img src="../../../assets/logo-olemix.png" alt="Logo Olemix" />
+      </div>
+
+      <div class="grid grid-cols-4 gap-10 sm:gap-20">
+        <button mat-button class="mat-button">Studio</button>
+        <button mat-button class="mat-button">Produções</button>
+        <button mat-button class="mat-button">História</button>
+        <button mat-button class="mat-button">Contato</button>
+      </div>
+
+      <button
+        class="flex items-center bg-white p-3 rounded-md"
+        (click)="redirectWhastapp()"
+      >
+        <span class="font-sans text-md font-bold text-black"
+          >Fale com a gente</span
+        >
+        <img
+          src="../../../assets/whatsapp.png"
+          alt="whatsapp"
+          class="h-6 ml-2"
+        />
+      </button>
+    </div>
+    <div *ngIf="screenWidth < 639" class="grid grid-cols-3 place-items-center">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="mr-5">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" class="mr-5" xPosition="before">
+        <button mat-menu-item>Studio</button>
+        <button mat-menu-item>Produções</button>
+        <button mat-menu-item>História</button>
+        <button mat-menu-item>Contato</button>
+      </mat-menu>
+      <div>
+        <img src="../../../assets/logo-mobile.png" alt="Logo Olemix" />
+      </div>
+    </div>
+  </div>
+</div>
