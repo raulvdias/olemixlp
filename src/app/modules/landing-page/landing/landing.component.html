@@ -1,11 +1,14 @@
 <div class="bg-black w-full background">
-  <div class="max-w-[100%] md:max-w-[70%] mx-auto pb-10 pt-10">
+  <div class="max-w-[100%] md:max-w-[70%] mx-auto pb-24 pt-10">
     <div class="grid grid-cols-1 md:grid-cols-2 place-items-center">
       <div class="flex flex-col gap-2 text-white max-w-[55%] mx-auto">
-        <span class="mt-5 sm:font-bold text-4xl">
+        <span
+          [@fade]="isScrolled ? 'hidden' : 'visible'"
+          class="mt-5 sm:font-bold text-4xl"
+        >
           Sua produção musical com eficácia e eficiência!
         </span>
-        <span class="text-xl mt-2">
+        <span [@fade]="isScrolled ? 'hidden' : 'visible'" class="text-xl mt-2">
           Completo para sua produção. Assim é a
           <span class="text-purple-500 font-bold">Olemix Audio Design!</span>
           Estrutura e equipamentos de qualidade para garantir uma produção de

@@ -9,6 +9,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { SwiperModule } from 'swiper/angular';
 import { LandingComponent } from './landing.component';
 import { ServicesComponent } from '../services/services.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [LandingComponent, SwipperComponent, ServicesComponent],
@@ -20,6 +21,7 @@ import { ServicesComponent } from '../services/services.component';
     MatSidenavModule,
     MatDividerModule,
     SwiperModule,
+    BrowserAnimationsModule,
   ],
 })
 export class LandingModule {}
