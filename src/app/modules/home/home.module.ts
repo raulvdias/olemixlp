@@ -7,12 +7,19 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HeaderComponent } from '../header/header.component';
 import { MatDividerModule } from '@angular/material/divider';
-import { SwipperComponent } from '../swipper/swipper.component';
 import { SwiperModule } from 'swiper/angular';
+import { RouterModule } from '@angular/router';
+import { homeRouting } from './home.routing';
+import { LandingModule } from '../landing-page/landing/landing.module';
+import { FooterComponent } from '../footer/footer.component';
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, SwipperComponent],
+  declarations: [HomeComponent, HeaderComponent, FooterComponent],
   imports: [
+    RouterModule.forRoot(homeRouting, {
+      anchorScrolling: 'enabled',
+      useHash: true,
+    }),
     CommonModule,
     MatButtonModule,
     MatIconModule,
@@ -20,6 +27,7 @@ import { SwiperModule } from 'swiper/angular';
     MatSidenavModule,
     MatDividerModule,
     SwiperModule,
+    LandingModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

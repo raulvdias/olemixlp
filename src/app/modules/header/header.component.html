@@ -1,9 +1,9 @@
 <div
-  class="flex flex-col gap-5 w-full z-20 sticky top-0 bg-black opacity-class border-b-2"
+  class="flex flex-col gap-5 w-full z-20 sticky top-0 bg-black opacity-class"
 >
   <div class="text-white p-0 w-full shadow-md">
     <div
-      *ngIf="screenWidth > 639"
+      *ngIf="screenWidth > 1294"
       class="grid grid-cols-3 place-items-center max-w-[70%] mx-auto"
     >
       <div>
@@ -31,16 +31,11 @@
         />
       </button>
     </div>
-    <div *ngIf="screenWidth < 639" class="grid grid-cols-3 place-items-center">
-      <button mat-icon-button [matMenuTriggerFor]="menu" class="mr-5">
+    <div *ngIf="screenWidth < 1294" class="grid grid-cols-3 place-items-center">
+      <button mat-icon-button class="mr-5">
         <mat-icon>menu</mat-icon>
       </button>
-      <mat-menu #menu="matMenu" class="mr-5" xPosition="before">
-        <button mat-menu-item>Studio</button>
-        <button mat-menu-item>Produções</button>
-        <button mat-menu-item>História</button>
-        <button mat-menu-item>Contato</button>
-      </mat-menu>
+
       <div>
         <img src="../../../assets/logo-mobile.png" alt="Logo Olemix" />
       </div>

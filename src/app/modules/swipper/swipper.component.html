@@ -1,12 +1,12 @@
-<div class="w-full bg-white border-b-2 border-blue-500 p-4">
-  <div class="flex flex-col gap-5 max-h-[40%] mx-auto">
+<div class="w-full bg-white p-4">
+  <div class="flex flex-col gap-5 mx-auto">
     <span
       class="text-center text-lg font-medium tracking-tight leading-10 truncate uppercase text-gray-500"
       >Prêmios conquistados</span
     >
     <swiper
       class="max-w-[60%] mx-auto"
-      [slidesPerView]="5"
+      [slidesPerView]="screenWidth > 638 ? 5 : 1"
       [autoplay]="
     {
     delay: 4000,
@@ -19,7 +19,7 @@
         *ngFor="let image of images"
         class="grid grid-cols-1 gap-2 place-items-center"
       >
-        <img src="{{ image.path }}" alt="Prêmio" class="max-h-28" />
+        <img src="{{ image.path }}" alt="Prêmio" class="h-28" />
         <span class="text-gray-500 uppercase truncate">{{ image.title }}</span>
       </ng-template>
     </swiper>

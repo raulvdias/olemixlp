@@ -6,6 +6,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -15,10 +16,13 @@ import {
 export class HeaderComponent implements OnInit {
   screenWidth: any;
   opacity: any;
+
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
   }
+
+  constructor() {}
 
   ngOnInit(): void {
     this.onResize();

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 Swiper.use([Navigation, Pagination, Autoplay]);
@@ -9,7 +9,11 @@ Swiper.use([Navigation, Pagination, Autoplay]);
   styleUrls: ['./swipper.component.scss'],
 })
 export class SwipperComponent implements OnInit {
-  constructor() {}
+  screenWidth: any;
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.screenWidth = window.innerWidth;
+  }
 
   images = [
     {
@@ -36,7 +40,22 @@ export class SwipperComponent implements OnInit {
       title: 'Troféu',
       path: '../../../assets/trofeu.jpg',
     },
+    {
+      title: 'Troféu',
+      path: '../../../assets/trofeu.jpg',
+    },
+    {
+      title: 'Troféu',
+      path: '../../../assets/trofeu.jpg',
+    },
+    {
+      title: 'Troféu',
+      path: '../../../assets/trofeu.jpg',
+    },
   ];
+  constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.onResize();
+  }
 }
