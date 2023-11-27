@@ -1,8 +1,5 @@
-<div class="bg-black h-screen scroll-smooth">
-  <app-header
-    [ngClass]="isNavbarFixed ? 'fixed' : 'notfixed'"
-    (scroll)="onScroll()"
-  ></app-header>
+<div class="bg-black min-h-screen scroll-smooth">
+  <app-header></app-header>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
 </div>

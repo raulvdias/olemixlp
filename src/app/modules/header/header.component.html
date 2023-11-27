@@ -6,15 +6,17 @@
       *ngIf="screenWidth > 1294"
       class="grid grid-cols-3 place-items-center max-w-[70%] mx-auto"
     >
-      <div>
+      <div (click)="redirectLanding()" class="cursor-pointer">
         <img src="../../../assets/logo-olemix.png" alt="Logo Olemix" />
       </div>
 
       <div class="grid grid-cols-4 gap-10 sm:gap-20">
-        <button mat-button class="mat-button">Studio</button>
+        <button mat-button class="mat-button">Estúdio</button>
         <button mat-button class="mat-button">Produções</button>
         <button mat-button class="mat-button">História</button>
-        <button mat-button class="mat-button">Contato</button>
+        <button mat-button class="mat-button">
+          <a routerLink="/home/contact">Contato</a>
+        </button>
       </div>
 
       <button

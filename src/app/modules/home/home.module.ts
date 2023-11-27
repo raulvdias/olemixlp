@@ -12,14 +12,12 @@ import { RouterModule } from '@angular/router';
 import { homeRouting } from './home.routing';
 import { LandingModule } from '../landing-page/landing/landing.module';
 import { FooterComponent } from '../footer/footer.component';
+import { ContactModule } from '../contact/contact.module';
 
 @NgModule({
   declarations: [HomeComponent, HeaderComponent, FooterComponent],
   imports: [
-    RouterModule.forRoot(homeRouting, {
-      anchorScrolling: 'enabled',
-      useHash: true,
-    }),
+    RouterModule.forRoot(homeRouting),
     CommonModule,
     MatButtonModule,
     MatIconModule,
@@ -28,6 +26,7 @@ import { FooterComponent } from '../footer/footer.component';
     MatDividerModule,
     SwiperModule,
     LandingModule,
+    ContactModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

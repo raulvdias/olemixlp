@@ -1,10 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
+  screenWidth: any;
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.screenWidth = window.innerWidth;
+  }
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.onResize();
+  }
+
+  redirectWhastapp() {
+    window.open(
+      'https://wa.me/556294545218?text=Olá, vim pelo site da Olemix Audio Design!'
+    );
+  }
 }

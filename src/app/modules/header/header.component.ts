@@ -7,6 +7,7 @@ import {
   transition,
 } from '@angular/animations';
 import { ViewportScroller } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +23,7 @@ export class HeaderComponent implements OnInit {
     this.screenWidth = window.innerWidth;
   }
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.onResize();
@@ -32,5 +33,9 @@ export class HeaderComponent implements OnInit {
     window.open(
       'https://wa.me/556294545218?text=Olá, vim pelo site da Olemix Audio Design!'
     );
+  }
+
+  redirectLanding() {
+    this.router.navigateByUrl('/home/landing');
   }
 }
