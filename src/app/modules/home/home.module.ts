@@ -13,6 +13,7 @@ import { homeRouting } from './home.routing';
 import { LandingModule } from '../landing-page/landing/landing.module';
 import { FooterComponent } from '../footer/footer.component';
 import { ContactModule } from '../contact/contact.module';
+import { HistoryModule } from '../about/about.module';
 
 @NgModule({
   declarations: [HomeComponent, HeaderComponent, FooterComponent],
@@ -27,7 +28,7 @@ import { ContactModule } from '../contact/contact.module';
     SwiperModule,
     LandingModule,
     ContactModule,
+    HistoryModule,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeModule {}

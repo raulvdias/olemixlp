@@ -10,10 +10,10 @@
           class="font-montSerrat font-bold text-xl text-center grid grid-cols-1 place-items-center"
           >Para agendar uma visita ao nosso estúdio, fale com a gente em alguma
           de nossas redes sociais ou telefones!
-          <div *ngIf="screenWidth < 1024" class="mt-5">
+          <div *ngIf="screenWidth < 1024">
             <button
               mat-button
-              class="text-black bg-purple-300 p-2 rounded-md"
+              class="text-black bg-purple-300 p-2 rounded-md mt-10"
               (click)="redirectWhastapp()"
             >
               Clique aqui
@@ -21,7 +21,11 @@
           </div>
         </span>
 
-        <img src="../../../assets/house-sound.png" alt="Casa" />
+        <img
+          src="../../../assets/house-sound.png"
+          alt="Casa"
+          class="mb-10 lg:mb-0"
+        />
       </div>
     </div>
     <div class="grid grid-cols-1 gap-5 place-items-center">
