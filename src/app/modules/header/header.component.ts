@@ -22,6 +22,11 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
+
+    //Case modal menu is opened and screen bigger than md: 1293, close modal
+    if (this.screenWidth > 1293 && this.opened) {
+      this.openMenu();
+    }
   }
 
   constructor(private router: Router) {}
@@ -42,5 +47,13 @@ export class HeaderComponent implements OnInit {
 
   openMenu() {
     this.opened = !this.opened;
+
+    document.querySelectorAll('body').forEach((body) => {
+      body.classList.toggle('no-scroll');
+    });
+
+    document.querySelectorAll('html').forEach((html) => {
+      html.classList.toggle('no-scroll');
+    });
   }
 }

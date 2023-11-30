@@ -1,6 +1,6 @@
 <div
   class="flex flex-col gap-5 w-full z-20 sticky top-0 bg-black opacity-class"
-  [ngClass]="opened ? 'open' : 'hide'"
+  [ngClass]="opened ? 'open' : ''"
 >
   <div class="text-white p-0 w-full shadow-md">
     <div
@@ -38,7 +38,8 @@
     </div>
     <div *ngIf="screenWidth < 1294" class="grid grid-cols-3 place-items-center">
       <button mat-icon-button class="mr-5" (click)="openMenu()">
-        <mat-icon>menu</mat-icon>
+        <mat-icon *ngIf="!opened">menu</mat-icon>
+        <mat-icon *ngIf="opened">close</mat-icon>
       </button>
 
       <div>
@@ -51,23 +52,33 @@
     *ngIf="opened"
   >
     <div class="grid grid-cols-1 gap-2 w-full">
-      <span class="text-center text-xl font-bold">Início</span>
+      <a routerLink="/home/landing" (click)="openMenu()" class="text-center"
+        ><span class="text-xl font-bold">Início</span></a
+      >
       <mat-divider></mat-divider>
     </div>
     <div class="grid grid-cols-1 gap-2 w-full">
-      <span class="text-center text-xl font-bold">Estúdio</span>
+      <a routerLink="/home/studio" (click)="openMenu()" class="text-center"
+        ><span class="text-xl font-bold">Estúdio</span></a
+      >
       <mat-divider></mat-divider>
     </div>
     <div class="grid grid-cols-1 gap-2 w-full">
-      <span class="text-center text-xl font-bold">Produções</span>
+      <a routerLink="/home/productions" (click)="openMenu()" class="text-center"
+        ><span class="text-xl font-bold">Produções</span></a
+      >
       <mat-divider></mat-divider>
     </div>
     <div class="grid grid-cols-1 gap-2 w-full">
-      <span class="text-center text-xl font-bold">Sobre</span>
+      <a routerLink="/home/about" (click)="openMenu()" class="text-center"
+        ><span class="text-xl font-bold">Sobre</span></a
+      >
       <mat-divider></mat-divider>
     </div>
     <div class="grid grid-cols-1 gap-2 w-full">
-      <span class="text-center text-xl font-bold">Contato</span>
+      <a routerLink="/home/contact" (click)="openMenu()" class="text-center"
+        ><span class="text-xl font-bold">Contato</span></a
+      >
       <mat-divider></mat-divider>
     </div>
 
