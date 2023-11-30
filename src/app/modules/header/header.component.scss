@@ -10,3 +10,27 @@
 .opacity-class {
   background-color: rgba(0, 0, 0, 0.9) !important;
 }
+
+.open {
+  position: absolute;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.98) !important;
+  overflow: hidden !important;
+  transition: all 1s ease-in-out !important;
+}
+
+.hide {
+  position: sticky;
+  top: 0;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  transition: all 1s ease-in-out !important;
+}
+
+.button {
+  background-color: white !important;
+  color: black !important;
+  padding: 6% !important;
+  padding-top: 7% !important;
+  padding-bottom: 7% !important;
+}

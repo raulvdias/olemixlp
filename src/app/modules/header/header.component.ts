@@ -17,6 +17,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   screenWidth: any;
   opacity: any;
+  opened = false;
 
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -37,5 +38,9 @@ export class HeaderComponent implements OnInit {
 
   redirectLanding() {
     this.router.navigateByUrl('/home/landing');
+  }
+
+  openMenu() {
+    this.opened = !this.opened;
   }
 }
