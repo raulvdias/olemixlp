@@ -5,15 +5,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../common/header/header.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { SwiperModule } from 'swiper/angular';
 import { RouterModule } from '@angular/router';
 import { homeRouting } from './home.routing';
-import { LandingModule } from '../landing-page/landing/landing.module';
-import { FooterComponent } from '../footer/footer.component';
-import { ContactModule } from '../contact/contact.module';
-import { HistoryModule } from '../about/about.module';
+import { LandingModule } from '../pages/landing-page/landing/landing.module';
+import { FooterComponent } from '../common/footer/footer.component';
+import { ContactModule } from '../pages/contact/contact.module';
+import { HistoryModule } from '../pages/about/about.module';
 
 @NgModule({
   declarations: [HomeComponent, HeaderComponent, FooterComponent],

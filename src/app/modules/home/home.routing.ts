@@ -1,8 +1,8 @@
 import { Route } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { ContactComponent } from '../contact/contact.component';
-import { LandingComponent } from '../landing-page/landing/landing.component';
-import { AboutComponent } from '../about/about.component';
+import { ContactComponent } from '../pages/contact/contact.component';
+import { LandingComponent } from '../pages/landing-page/landing/landing.component';
+import { AboutComponent } from '../pages/about/about.component';
 
 export const homeRouting: Route[] = [
   {

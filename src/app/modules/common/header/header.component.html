@@ -52,42 +52,58 @@
     *ngIf="opened"
   >
     <div class="grid grid-cols-1 gap-2 w-full">
-      <a routerLink="/home/landing" (click)="openMenu()" class="text-center"
-        ><span class="text-xl font-bold">Início</span></a
+      <a
+        routerLink="/home/landing"
+        (click)="openMenu()"
+        class="text-center text-xl font-bold"
+        >Início</a
       >
       <mat-divider></mat-divider>
     </div>
     <div class="grid grid-cols-1 gap-2 w-full">
-      <a routerLink="/home/studio" (click)="openMenu()" class="text-center"
-        ><span class="text-xl font-bold">Estúdio</span></a
+      <a
+        routerLink="/home/studio"
+        (click)="openMenu()"
+        class="text-center text-xl font-bold"
+        >Estúdio</a
       >
       <mat-divider></mat-divider>
     </div>
     <div class="grid grid-cols-1 gap-2 w-full">
-      <a routerLink="/home/productions" (click)="openMenu()" class="text-center"
-        ><span class="text-xl font-bold">Produções</span></a
+      <a
+        routerLink="/home/productions"
+        (click)="openMenu()"
+        class="text-center text-xl font-bold"
+        >Produções</a
       >
       <mat-divider></mat-divider>
     </div>
     <div class="grid grid-cols-1 gap-2 w-full">
-      <a routerLink="/home/about" (click)="openMenu()" class="text-center"
-        ><span class="text-xl font-bold">Sobre</span></a
+      <a
+        routerLink="/home/about"
+        (click)="openMenu()"
+        class="text-center text-xl font-bold"
+        >Sobre</a
       >
       <mat-divider></mat-divider>
     </div>
     <div class="grid grid-cols-1 gap-2 w-full">
-      <a routerLink="/home/contact" (click)="openMenu()" class="text-center"
-        ><span class="text-xl font-bold">Contato</span></a
+      <a
+        routerLink="/home/contact"
+        (click)="openMenu()"
+        class="text-center text-xl font-bold"
+        >Contato</a
       >
       <mat-divider></mat-divider>
     </div>
-
-    <div
-      class="mt-10 flex flex-row gap-2 justify-center rounded-md bg-black text-black button w-full text-xl font-bold"
-      (click)="redirectWhastapp()"
-    >
-      <span>Fale com a gente!</span>
-      <img src="../../../assets/whatsapp.png" alt="whatsapp" class="h-8 ml-2" />
+    <div class="grid grid-cols-1 gap-2 w-full">
+      <a
+        routerLink="/home/login"
+        (click)="openMenu()"
+        class="text-center text-xl font-bold"
+        >Login</a
+      >
+      <mat-divider></mat-divider>
     </div>
   </div>
 </div>
