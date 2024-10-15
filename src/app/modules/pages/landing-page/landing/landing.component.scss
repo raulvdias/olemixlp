@@ -1,4 +1,5 @@
 .background {
+  height: 90vh;
   @apply bg-no-repeat bg-cover bg-[center_center] bg-fixed relative;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url(../../../../../assets/background.png);

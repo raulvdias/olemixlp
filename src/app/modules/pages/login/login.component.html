@@ -1,0 +1,71 @@
+<div class="background text-white p-2 pt-4 pt-[50%] lg:p-20">
+  <div class="grid grid-cols-1 gap-1 place-items-center">
+    <div class="rounded-md flex flex-col gap-2 bg-white min-w-[30%] p-4">
+      <span class="font-bold text-xl text-black flex justify-center pt-5"
+        >Login</span
+      >
+
+      <div class="flex flex-col gap-1" [formGroup]="form">
+        <mat-form-field
+          class="w-full"
+          appearance="fill"
+          subscriptSizing="dynamic"
+        >
+          <mat-label class="font-bold">E-mail</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="seuemail@hotmail.com"
+          />
+        </mat-form-field>
+        <mat-form-field
+          class="w-full"
+          appearance="fill"
+          subscriptSizing="dynamic"
+        >
+          <mat-label class="font-bold">Senha</mat-label>
+          <input
+            [type]="showingPassword == true ? 'text' : 'password'"
+            matInput
+            formControlName="password"
+          />
+          <mat-icon
+            *ngIf="showingPassword"
+            (click)="showPassword()"
+            matSuffix
+            class="text-black"
+            >visibility</mat-icon
+          >
+          <mat-icon
+            *ngIf="!showingPassword"
+            (click)="showPassword()"
+            matSuffix
+            class="text-black"
+            >visibility_off</mat-icon
+          >
+        </mat-form-field>
+        <div class="flex justify-end">
+          <span class="text-black hover:underline cursor-pointer p-2 max-w-fit"
+            >Esqueceu sua senha?</span
+          >
+        </div>
+        <button
+          mat-raised-button
+          class="rounded-md"
+          [color]="'primary'"
+          (click)="loginWithEmail()"
+        >
+          Entrar
+        </button>
+        <div class="flex justify-center pt-2">
+          <div class="flex flex-row gap-1">
+            <span class="text-black">Não tem uma conta ainda?</span>
+            <span class="text-blue-500 hover:underline cursor-pointer"
+              >Faça sua conta</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

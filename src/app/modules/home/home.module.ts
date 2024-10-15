@@ -6,7 +6,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HeaderComponent } from '../common/header/header.component';
-import { MatDividerModule } from '@angular/material/divider';
 import { SwiperModule } from 'swiper/angular';
 import { RouterModule } from '@angular/router';
 import { homeRouting } from './home.routing';
@@ -14,6 +13,7 @@ import { LandingModule } from '../pages/landing-page/landing/landing.module';
 import { FooterComponent } from '../common/footer/footer.component';
 import { ContactModule } from '../pages/contact/contact.module';
 import { HistoryModule } from '../pages/about/about.module';
+import { LoginModule } from '../pages/login/login.module';
 
 @NgModule({
   declarations: [HomeComponent, HeaderComponent, FooterComponent],
@@ -28,6 +28,7 @@ import { HistoryModule } from '../pages/about/about.module';
     LandingModule,
     ContactModule,
     HistoryModule,
+    LoginModule,
   ],
 })
 export class HomeModule {}
