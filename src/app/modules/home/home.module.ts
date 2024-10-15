@@ -24,7 +24,6 @@ import { HistoryModule } from '../pages/about/about.module';
     MatIconModule,
     MatMenuModule,
     MatSidenavModule,
-    MatDividerModule,
     SwiperModule,
     LandingModule,
     ContactModule,
