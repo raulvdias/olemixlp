@@ -1,4 +1,4 @@
-<div class="background text-white p-2 pt-4 pt-[50%] lg:p-20">
+<div class="background text-white p-2 pt-[50%] sm:pt-[10%]">
   <div class="grid grid-cols-1 gap-1 place-items-center">
     <div class="rounded-md flex flex-col gap-2 bg-white min-w-[30%] p-4">
       <span class="font-bold text-xl text-black flex justify-center pt-5"
@@ -44,7 +44,7 @@
             >visibility_off</mat-icon
           >
         </mat-form-field>
-        <div class="flex justify-end">
+        <div class="flex justify-end pb-3">
           <span class="text-black hover:underline cursor-pointer p-2 max-w-fit"
             >Esqueceu sua senha?</span
           >
@@ -55,9 +55,10 @@
           [color]="'primary'"
           (click)="loginWithEmail()"
         >
-          Entrar
+          <span *ngIf="!loading"> Entrar</span>
+          <mat-spinner [diameter]="30" *ngIf="loading"></mat-spinner>
         </button>
-        <div class="flex justify-center pt-2">
+        <div class="flex justify-center pt-5">
           <div class="flex flex-row gap-1">
             <span class="text-black">Não tem uma conta ainda?</span>
             <span class="text-blue-500 hover:underline cursor-pointer"

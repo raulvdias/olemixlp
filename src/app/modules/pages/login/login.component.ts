@@ -4,6 +4,7 @@ import {
   UntypedFormGroup,
   Validators,
 } from '@angular/forms';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +14,12 @@ import {
 export class LoginComponent implements OnInit {
   form!: UntypedFormGroup;
   showingPassword = false;
+  loading = false;
 
-  constructor(private _formBuilder: UntypedFormBuilder) {}
+  constructor(
+    private _formBuilder: UntypedFormBuilder,
+    private _auth: AngularFireAuth
+  ) {}
 
   ngOnInit(): void {
     this.form = this._formBuilder.group({
@@ -24,7 +29,21 @@ export class LoginComponent implements OnInit {
   }
 
   loginWithEmail() {
-    console.log(this.form.value);
+    if (this.form.valid) {
+      this.loading = true;
+      this._auth
+        .signInWithEmailAndPassword(
+          this.form.value.email,
+          this.form.value.password
+        )
+        .then((response) => {
+          setTimeout(() => {
+            this.loading = false;
+          }, 2000);
+          console.log(response);
+        })
+        .catch((err) => console.log(err));
+    }
   }
 
   showPassword() {
