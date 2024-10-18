@@ -1,10 +1,6 @@
 .background {
-  height: 90vh;
+  height: 80dvh;
   @apply bg-no-repeat bg-cover bg-[center_center] bg-fixed relative;
   background: linear-gradient(rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.93)),
     url(../../../../assets/background.png);
-}
-
-.mat-mdc-progress-spinner {
-  --mdc-circular-progress-active-indicator-color: rgb(255, 255, 255);
 }

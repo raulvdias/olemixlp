@@ -11,9 +11,9 @@ import { RouterModule } from '@angular/router';
 import { homeRouting } from './home.routing';
 import { LandingModule } from '../pages/landing-page/landing/landing.module';
 import { FooterComponent } from '../common/footer/footer.component';
-import { ContactModule } from '../pages/contact/contact.module';
-import { HistoryModule } from '../pages/about/about.module';
-import { LoginModule } from '../pages/login/login.module';
+import { ContactComponent } from '../pages/contact/contact.component';
+import { AboutComponent } from '../pages/about/about.component';
+import { LoginComponent } from '../pages/login/login.component';
 
 @NgModule({
   declarations: [HomeComponent, HeaderComponent, FooterComponent],
@@ -26,9 +26,9 @@ import { LoginModule } from '../pages/login/login.module';
     MatSidenavModule,
     SwiperModule,
     LandingModule,
-    ContactModule,
-    HistoryModule,
-    LoginModule,
+    ContactComponent,
+    AboutComponent,
+    LoginComponent,
   ],
 })
 export class HomeModule {}

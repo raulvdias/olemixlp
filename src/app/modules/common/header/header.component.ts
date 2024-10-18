@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
   }
 
   redirectLanding() {
-    this.router.navigateByUrl('/home/landing');
+    this.router.navigateByUrl('/landing');
   }
 
   openMenu() {

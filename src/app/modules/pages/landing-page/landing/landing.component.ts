@@ -16,7 +16,7 @@ import {
     trigger('fade', [
       state('visible', style({ display: 1 })),
       state('hidden', style({ opacity: 0 })),
-      transition('visible <=> hidden', animate('1.5s ease-in-out')),
+      transition('visible <=> hidden', animate('0.5s ease-in-out')),
       transition(':enter', [
         style({ opacity: 0.1 }),
         animate(1500, style({ opacity: 1 })),
@@ -39,5 +39,11 @@ export class LandingComponent implements OnInit {
 
   ngOnInit(): void {
     this.scrollCheck();
+  }
+
+  redirectWhastapp() {
+    window.open(
+      'https://wa.me/556294545218?text=Olá, vim pelo site da Olemix Audio Design!'
+    );
   }
 }

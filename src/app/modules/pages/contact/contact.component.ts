@@ -1,9 +1,12 @@
+import { NgIf } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
+  standalone: true,
+  imports: [NgIf],
 })
 export class ContactComponent implements OnInit {
   screenWidth: any;

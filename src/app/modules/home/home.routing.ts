@@ -4,15 +4,16 @@ import { ContactComponent } from '../pages/contact/contact.component';
 import { LandingComponent } from '../pages/landing-page/landing/landing.component';
 import { AboutComponent } from '../pages/about/about.component';
 import { LoginComponent } from '../pages/login/login.component';
+import { DevelopmentComponent } from '../pages/development/development.component';
 
 export const homeRouting: Route[] = [
   {
-    path: 'home',
+    path: '',
     pathMatch: 'full',
-    redirectTo: 'home/landing',
+    redirectTo: '',
   },
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
     children: [
       {
@@ -30,6 +31,14 @@ export const homeRouting: Route[] = [
       {
         path: 'login',
         component: LoginComponent,
+      },
+      {
+        path: 'productions',
+        component: DevelopmentComponent,
+      },
+      {
+        path: 'studio',
+        component: DevelopmentComponent,
       },
     ],
   },
